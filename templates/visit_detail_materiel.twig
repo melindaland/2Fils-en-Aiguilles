@@ -1,0 +1,88 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+Matériels | 2 Fil en Aiguilles
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="css/visitor.css">
+{% endblock %}
+
+{% block main %}
+<!-- Détail d'un matériel -->
+<div class="container-1 my-4">
+    <div class="carddetail-1 mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="upload/{{ materiel.image }}" class="img-fluid custom-imggg" alt="Image du matériel">
+            </div>
+            <div class="col-md-8">
+                <div class="carddetail-body-1">
+                    <p class="badge text-medium">categorie {{ materiel.categorie }}</p>
+                    <h4 class="carddetail-title">{{ materiel.nom }}</h4>
+                    <p class="carddetail-text">{{ materiel.description }}</p>
+                    <button class="btn btntelechager bi bi-hand-index" data-bs-toggle="modal" data-bs-target="#demandeEmpruntModal">
+                        Emprunter le matériel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section des objets associés -->
+<div class="container2 my-4">
+    <h3 class="mb-4">Informations sur le matériel</h3>
+    <div class="row g-3 justify-content-start">
+        {% for objet in liste_objets %}
+        <div class="col-md-4"> 
+            <div class="bloc-card">
+                <div class="bloc-card-body">
+                    <img src="upload/{{ objet.image }}" class="bloc-image" alt="image de l'objet">
+                    <h4 class="bloc-title">{{ objet.titre}}</h4>
+                    <h5 class="bloc-subtitle">{{ objet.redacteur}}</h5>
+                    <p class="bloc-text">{{ objet.accroche}}</p>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p>Aucune information présente</p>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Modal pour la demande d'emprunt -->
+<div class="modal fade" id="demandeEmpruntModal" tabindex="-1" aria-labelledby="demandeEmpruntModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="demandeEmpruntModalLabel">Demander à emprunter le matériel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formEmprunt" method="post">
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Adresse Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telephone" class="form-label">Numéro de téléphone</label>
+                        <input type="tel" class="form-control" id="telephone" name="telephone" required>
+                    </div>
+                    <button type="submit" class="btn btnretour">
+                        Envoyer la demande
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

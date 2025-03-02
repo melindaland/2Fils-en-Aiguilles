@@ -1,0 +1,101 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+Administrateur | 2 Fil en Aiguilles
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="css/admin.css">
+{% endblock %}
+
+{% block menu %}
+<!-- Côté admin -->
+<div class="header-menu">
+    <a href="admin.php">
+		<img src="./images/logo.png" alt="Logo" class="logo_menu">
+	</a>
+    <nav class="menu">
+        <a class="nav-link" href="admin.php?page=materiel"><i class="bi bi-gear-wide"></i>Gestion des matériels loués</a>
+        <a class="nav-link" href="admin.php?page=cours"><i class="bi bi-gear-wide-connected"></i>Gestion de tous les cours</a>
+        <a class="nav-link" href="index.php?page=login"><i class="bi bi-box-arrow-right"></i>Quitter</a>
+    </nav>
+{% endblock %}
+
+{% block main %}
+<!-- Intro sur la page administrateur -->
+<div class="card-admin text-dark bg-light mb-3 mt-4 w-100 text-center text-white">
+  <div class="card-header">Tableau de bord de l'administrateur</div>
+  <div class="card-body">
+    <h4 class="card-title">Bienvenue sur votre espace administrateur</h4>
+    <p class="card-text">Cet espace a été conçu pour vous offrir une gestion simplifiée et efficace des matériels et des contenus. Depuis ce tableau de bord, vous avez accès à toutes les fonctionnalités nécessaires pour maintenir, organiser et les articles et les ressources pédagogiques.</p>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Conteneur Flexbox -->
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="mt-3">Matériels présents sur le site</h2>
+      <!-- Carrousel des matériels -->
+      <div id="carouselMateriels" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          {% for materiel in materiels %}
+          <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <div class="card " style="width: 100%; position: relative;">
+              <img src="upload/{{ materiel.image }}" class="card-img-top" alt="{{ materiel.nom }}">
+              <div class="card-body">
+                <h5 class="card-title text-center">{{ materiel.nom|slice(0, 20) ~ '...' }}</h5>
+                <a href="admin.php?page=materiel&action=read&id={{ materiel.id }}" class="btn">Voir le détail du matériel</a>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselMateriels" data-bs-slide="prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselMateriels" data-bs-slide="next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+    <h2 class="mt-3">Cours présents sur le site</h2>
+      <!-- Carrousel des cours -->
+      <div id="carouselCours" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          {% for cours in cours %}
+          <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <div class="card" style="width: 100%; position: relative;">
+              <img src="upload/{{ cours.image }}" class="card-img-top" alt="{{ cours.nom }}">
+              <div class="card-body">
+                <h5 class="card-title text-center">{{ cours.nom|slice(0, 20) ~ '...' }}</h5>
+                <a href="admin.php?page=cours&action=read&id={{ cours.id }}" class="btn">Voir le détail du cours</a>
+              </div>
+
+              <!-- Contrôles du carrousel sur la carte -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselCours" data-bs-slide="prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselCours" data-bs-slide="next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+

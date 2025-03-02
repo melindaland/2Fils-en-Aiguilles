@@ -1,0 +1,36 @@
+{% extends 'admin.twig' %}
+
+{% block main %}
+<h2>Modifier une information sur le cours</h2>
+<form action="admin.php?page=article&action=update" method="post" enctype="multipart/form-data" class="form-container">
+	<input type="hidden" name="id" readonly value="{{ article.id }}">
+	<input type="hidden" name="id_cours" value="{{ article.id_cours }}">
+	<input type="hidden" name="ordre" value="{{ article.ordre }}">
+
+	<div class="mb-3">
+		<label for="titre" class="form-label">Titre</label>
+		<input type="text" name="titre" id="titre" class="form-control" placeholder="Titre" value="{{ article.titre }}">
+	</div>
+
+	<div class="mb-3">
+		<label for="redacteur" class="form-label">Rédacteur</label>
+		<input type="text" name="redacteur" id="redacteur" class="form-control" placeholder="Rédacteur" value="{{ article.redacteur }}">
+	</div>
+
+	<div class="mb-3">
+		<label for="accroche" class="form-label">Information</label>
+		<textarea name="accroche" id="accroche" class="form-control" rows="5" placeholder="Saisir une information">{{ article.accroche }}</textarea>
+	</div>
+
+	<input type="hidden" name="old-image" value="{{ article.image }}">
+
+	<div class="mb-3">
+		<label for="image" class="form-label">Changer l'image</label>
+		<input type="file" name="image" id="image" class="form-control">
+	</div>
+
+	<div class="mb-3">
+		<input type="submit" value="Envoyer" class="btn btn5">
+	</div>
+</form>
+{% endblock %}

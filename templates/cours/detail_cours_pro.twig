@@ -1,0 +1,47 @@
+{% extends 'pro.twig' %}
+
+{% block main %}
+<div class="container-1 my-4">
+    <div class="card-1 mb-3">
+        <div class="row g-0">
+            <!-- Colonne pour l'image -->
+            <div class="col-md-4">
+                <img src="upload/{{ cours.image }}" class="img-fluid custom-imgg" alt="Image du cours">
+            </div>
+            <!-- Colonne pour le contenu -->
+            <div class="col-md-8">
+                <div class="card-body-1">
+                    <h4 class="bloc-title">{{ cours.nom }}</h4>
+                    <p class="bloc-text">{{ cours.description }}</p>
+                    <a href="pro.php?page=article&action=new&id={{ cours.id }}" class="btn btn6">Ajouter une information sur le cours</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container2 my-4">
+    <h3 class="mb-4">Ajouter des informations sur mon cours</h3>
+    <div class="row g-3 justify-content-start">
+        {% for article in liste_articles %}
+        <div class="col-md-4"> 
+            <div class="bloc-card">
+                <div class="bloc-card-body">
+                    <img src="upload/{{ article.image }}" class="bloc-image" alt="image de l'article">
+                    <h4 class="bloc-title">{{ article.titre|slice(0, 10) ~ '...'  }}</h4>
+                    <h5 class="bloc-subtitle">{{ article.redacteur|slice(0, 10) ~ '...'  }}</h5>
+                    <p class="bloc-text">{{ article.accroche|slice(0, 10) ~ '...'  }}</p>
+                    <div class="bloc-actions">
+                        <a href="pro.php?page=article&action=read&id={{ article.id }}" class="btn btn7">Voir le détail</a>
+                        <a href="pro.php?page=article&action=exchange&id={{ article.id }}" class="btn btn8">Remonter</a>
+                        <a href="pro.php?page=article&action=edit&id={{ article.id }}" class="btn btn9">Modifier</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p>Aucune information présente</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

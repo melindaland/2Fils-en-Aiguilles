@@ -1,0 +1,475 @@
+/* Propriétés générales */
+h1 {
+	font-family: "Protest Riot";
+	font-size: 42px;
+	color: #4A919E;
+}
+
+h2 {
+	font-family: "Quicksand";
+	color: #356871;
+	font-weight: bolder;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+h4 {
+	font-family: "Quicksand";
+	font-weight: 500;
+	color: white;
+	position: relative;
+}
+
+p {
+	font-family: "Quicksand";
+	color: #212E53;
+}
+
+/* Header */
+.header-menu {
+	background-color: #4A919E;
+}
+
+.menu .nav-link:hover {
+	color: #212E53;
+	border-bottom: 2px solid #212E53;
+}
+
+/* Administrateur page de présentation */
+.card-admin h4 {
+	color: #212E53;
+	font-weight: bold;
+}
+
+.card-header {
+	background-color: #356871;
+}
+
+/* Pour les deux carrousels */
+.card-img-top {
+	width: 18rem;
+	height: 200px;
+	object-fit: cover;
+	margin-top: 20px;
+}
+
+.card {
+	width: 18rem;
+	background-color: #e0e0e0;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.card-title {
+	color: #212E53;
+	font-weight: 600;
+}
+
+.card:hover {
+	background-color: #b0b0b0;
+}
+
+/* Contrôles du carrousel */
+.carousel-control-prev,
+.carousel-control-next {
+	background-color: #4a919ed0;
+	border-radius: 50%;
+	padding: 15px;
+	width: 50px;
+	height: 50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	filter: invert(1);
+	font-size: 25px;
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-control-prev {
+	left: 10px;
+}
+
+.carousel-control-next {
+	right: 10px;
+}
+
+/* Bouton */
+.carousel-inner .btn {
+	font-family: "Quicksand";
+	width: 210px;
+	background-color: transparent;
+	color: #212E53;
+	border: 2px solid #212E53;
+	transition: 0.3s ease-in-out;
+	position: relative;
+}
+
+.carousel-inner .btn:hover {
+	background-color: #212E53;
+	color: white;
+	border: 2px solid transparent;
+}
+
+/* Liste des cours */
+.card-bloc {
+	box-shadow: 0 4px 6px #0000001a;
+	margin: 10px;
+}
+
+.card-body .btn-group {
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+}
+
+.card-body .btn {
+	text-align: center;
+}
+
+.card-bloc .btn-group a {
+	text-decoration: none;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+	color: white;
+	border-radius: 5px;
+	width: 210px;
+	transition: 0.3s ease-in-out;
+	position: relative;
+}
+
+.btn1 {
+	background-color: #212E53;
+	border: solid 2px #212E53;
+}
+
+.btn2 {
+	background-color: #356871;
+	border: solid 2px #356871;
+}
+
+.btn3 {
+	background-color: #4A919E;
+	border: solid 2px #4A919E;
+}
+
+.btn1:hover,
+.btn2:hover,
+.btn3:hover {
+	background-color: #b0b0b0;
+}
+
+.btn4 {
+	font-family: "Quicksand";
+	width: 210px;
+	background-color: transparent;
+	color: #212E53;
+	border: 2px solid #212E53;
+	transition: 0.3s ease-in-out;
+	position: relative;
+}
+
+.btn4:hover {
+	background-color: #212E53;
+	color: white;
+	border: 2px solid transparent;
+}
+
+.card-title {
+	font-family: "Quicksand";
+}
+
+.badge {
+	background-color: #CE6A6B;
+}
+
+.card-card h5 {
+	color: #212E53;
+}
+
+.card-card {
+	color: white;
+	padding: 20px;
+	text-align: center;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+/* Formulaire */
+.btn5 {
+	font-family: "Quicksand";
+	width: 210px;
+	background-color: transparent;
+	color: #CE6A6B;
+	border: 2px solid #CE6A6B;
+	transition: 0.3s ease-in-out;
+	position: relative;
+}
+
+.btn5:hover {
+	background-color: #CE6A6B;
+	color: white;
+	border: 2px solid transparent;
+}
+
+/* Détails cours */
+.card-1 {
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0 auto;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card2 {
+	display: flex;
+	flex-wrap: nowrap;
+	height: auto;
+}
+
+.col-md-4 {
+	flex: 0 0 40%;
+	width: 40%;
+	padding: 10px;
+}
+
+.col-md-4 img {
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+	border-radius: 5px 0 0 5px;
+}
+
+.col-md-8 {
+	flex: 1;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	background-color: #ffffff;
+}
+
+.card-body-1 {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.bloc-title {
+	font-size: 24px;
+	font-weight: bold;
+	color: #212E53;
+	margin: 0;
+}
+
+.bloc-text {
+	font-size: 16px;
+	color: #555;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.btn6 {
+	font-family: "Quicksand", sans-serif;
+	width: fit-content;
+	padding: 10px 20px;
+	background-color: transparent;
+	color: #212E53;
+	border: 2px solid #212E53;
+	transition: 0.3s ease-in-out;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn6:hover {
+	background-color: #212E53;
+	color: white;
+	border: 2px solid transparent;
+}
+
+/* Cards en dessous de l'introduction de l'article */
+.text-center {
+	text-align: center;
+}
+
+.bloc-card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.bloc-card-body img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 15px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.g-3 {
+	gap: 5px;
+}
+
+.bloc-actions a {
+	margin: 5px;
+}
+
+.col-md-4 {
+	flex: 0 0 25%;
+	width: 25%;
+}
+
+.bloc-card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.bloc-title,
+.bloc-subtitle,
+.bloc-text {
+	margin-bottom: 10px;
+}
+
+.bloc-actions a {
+	width: 100%;
+	margin: 5px 0;
+}
+
+.bloc-text {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+/* Boutons */
+.btn7 {
+	background-color: #212E53;
+	color: white;
+	border: 2px solid #212E53;
+}
+
+.btn8 {
+	background-color: #356871;
+	color: white;
+	border: 2px solid #356871;
+}
+
+.btn9 {
+	background-color: #4A919E;
+	color: white;
+	border: 2px solid #4A919E;
+}
+
+.btn10 {
+	background-color: #b0b0b0;
+	color: white;
+	border: 2px solid #b0b0b0;
+}
+
+
+/* Détail de l'article */
+.main-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.article-container {
+	width: 100%;
+	max-width: 800px;
+}
+
+.custom-card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+}
+
+.custom-card-body {
+	padding: 20px;
+}
+
+.custom-card-title {
+	font-size: 1.75rem;
+	font-weight: bold;
+	color: #356871;
+}
+
+.custom-card-subtitle {
+	font-size: 1.25rem;
+	color: #6c757d;
+}
+
+.custom-card-text {
+	font-size: 1rem;
+	color: #555;
+}
+
+.img-container {
+	margin-top: 20px;
+}
+
+.custom-img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+	background-color: #4A919E;
+}
+
+.bloc2 .footer-menu .nav-link:hover,
+.bloc2 .social-media i:hover {
+	color: #212E53;
+}
+
+.bloc1 .nav-link:hover,
+.bloc1 .liens .nav-link:hover {
+	color: #212E53;
+}
+
+/* Animation des boutons du tableau de bord */
+.btn1,
+.btn2,
+.btn4 {
+	transition: all 0.3s ease-in-out;
+	position: relative;
+}
+
+/* Animation au survol des boutons */
+.btn1:hover,
+.btn2:hover,
+.btn4:hover {
+	background-color: #b0b0b0;
+	color: rgb(0, 0, 0);
+	transform: translateY(-5px);
+}
+

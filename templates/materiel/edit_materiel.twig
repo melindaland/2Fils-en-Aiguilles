@@ -1,0 +1,47 @@
+{% extends 'admin.twig' %}
+
+{% block main %}
+<div class="container mt-3 p-4">
+    <h1 class="text-center">Modifier le matériel</h1>
+    <form action="admin.php?page=materiel&action=update" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="id" readonly value="{{ materiel.id }}">
+
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom du matériel</label>
+            <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" value="{{ materiel.nom }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description du matériel</label>
+            <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="{{ materiel.description }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="old-image" class="form-label">Image actuelle</label>
+            <input type="text" class="form-control" id="old-image" name="old-image" value="{{ materiel.image }}" readonly>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Nouvelle image</label>
+            <input type="file" class="form-control" id="image" name="image">
+        </div>
+
+        <div class="mb-3">
+            <label for="categorie" class="form-label">Catégorie</label>
+            <select class="form-select" id="categorie" name="categorie" required>
+                <option value="machineacoudre" {% if materiel.categorie == 'machineacoudre' %}selected{% endif %}>Machine à coudre</option>
+                <option value="kitdecouture" {% if materiel.categorie == 'kitdecouture' %}selected{% endif %}>Kit de couture</option>
+                <option value="bobine" {% if materiel.categorie == 'bobine' %}selected{% endif %}>Bobine</option>
+                <option value="metreruban" {% if materiel.categorie == 'metreruban' %}selected{% endif %}>Mètre ruban</option>
+                <option value="ciseaux" {% if materiel.categorie == 'ciseaux' %}selected{% endif %}>Ciseaux</option>
+            </select>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <input type="submit" class="btn btn5" value="Envoyer">
+        </div>
+
+    </form>
+</div>
+{% endblock %}

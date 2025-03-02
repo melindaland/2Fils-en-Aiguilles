@@ -1,0 +1,36 @@
+{% extends 'pro.twig' %}
+
+{% block main %}
+<div class="container mt-3 p-4">
+    <h1 class="text-center">Ajouter un nouveau cours</h1>
+    <form action="pro.php?page=cours&action=create" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom du cours</label>
+            <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Description du cours</label>
+            <textarea class="form-control" id="description" name="description" rows="4" placeholder="Description" required></textarea>
+        </div>
+        
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" class="form-control" id="image" name="image" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="niveau" class="form-label">Niveau</label>
+            <select class="form-select" id="niveau" name="niveau" required>
+                <option value="debutant">Débutant</option>
+                <option value="intermediaire">Intermédiaire</option>
+                <option value="avance">Avancé</option>
+            </select>
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <input type="submit" class="btn btn5" value="Ajouter">
+        </div>
+    </form>
+</div>
+{% endblock %}

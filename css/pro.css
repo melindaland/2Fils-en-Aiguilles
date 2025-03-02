@@ -1,0 +1,459 @@
+/* Propriétés générales */
+h1 {
+    font-family: "Protest Riot";
+    font-size: 42px;
+    color: #CE6A6B;
+}
+
+h2 {
+    font-family: "Quicksand";
+    color: #9a4f50;
+    font-weight: bolder;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-family: "Quicksand";
+    font-weight: 500;
+    color: white;
+    position: relative;
+}
+
+p {
+    font-family: "Quicksand";
+    color: #552b2c;
+}
+
+/* Header */
+.header-menu {
+    background-color: #EBACA2;
+}
+
+.menu .nav-link:hover {
+    color: #CE6A6B;
+    border-bottom: 2px solid #CE6A6B;
+}
+
+/* Administrateur page de présentation */
+.card-admin h4 {
+    color: #CE6A6B;
+    font-weight: bold;
+}
+
+.card-header {
+    background-color: #552b2c;
+}
+
+/* Profil */
+.btnprofil {
+    background-color: #9a4f50;
+    border: solid 2px #9a4f50;
+}
+
+.btnprofillien {
+    color: #9a4f50;
+    border-radius: 5px;
+    border: solid 2px #9a4f50;
+    width: 210px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.btnprofillien:hover {
+    background-color: #9a4f50;
+    border: solid 2px #9a4f50;
+    color: white;
+}
+
+/* Liste des cours */
+.card-bloc {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px #0000001a;
+    margin: 10px;
+}
+
+.card-body .btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.card-body .btn {
+    text-align: center;
+}
+
+.card-bloc .btn-group a {
+    text-decoration: none;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+    color: white;
+    border-radius: 5px;
+    width: 210px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.btn1 {
+    background-color: #CE6A6B;
+    border: solid 2px #CE6A6B;
+}
+
+.btn2 {
+    background-color: #9a4f50;
+    border: solid 2px #9a4f50;
+}
+
+.btn1:hover,
+.btn2:hover {
+    background-color: #b0b0b0;
+}
+
+.btn4 {
+    font-family: "Quicksand";
+    width: 210px;
+    background-color: transparent;
+    color: #552b2c;
+    border: 2px solid #552b2c;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.btn4:hover {
+    background-color: #552b2c;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.card-title {
+    font-family: "Quicksand";
+}
+
+.badge {
+    background-color: #4A919E;
+}
+
+.card-card h5 {
+    color: #552b2c;
+}
+
+.card-card {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+.btn5 {
+    font-family: "Quicksand";
+    width: 210px;
+    background-color: transparent;
+    color: #212E53;
+    border: 2px solid #212E53;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.btn5:hover {
+    background-color: #212E53;
+    color: white;
+    border: 2px solid transparent;
+}
+
+/* Détails cours */
+.card-1 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card2 {
+    display: flex;
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+.col-md-4 {
+    flex: 0 0 40%;
+    width: 40%;
+    padding: 10px;
+}
+
+.col-md-4 img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+}
+
+.col-md-8 {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.card-body-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bloc-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #552b2c;
+    margin: 0;
+}
+
+.bloc-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.btn6 {
+    font-family: "Quicksand", sans-serif;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #552b2c;
+    border: 2px solid;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn6:hover {
+    background-color: #552b2c;
+    color: white;
+    border: 2px solid transparent;
+}
+
+/* Cards en dessous de l'introduction de l'article */
+.text-center {
+    text-align: center;
+}
+
+.bloc-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.bloc-card-body img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.g-3 {
+    gap: 5px;
+}
+
+.bloc-actions a {
+    margin: 5px;
+}
+
+.col-md-4 {
+    flex: 0 0 25%;
+    width: 25%;
+}
+
+.bloc-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bloc-title,
+.bloc-subtitle,
+.bloc-text {
+    margin-bottom: 10px;
+}
+
+.bloc-actions a {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.bloc-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Boutons */
+.btn7 {
+    background-color: #552b2c;
+    color: white;
+    border: 2px solid #552b2c;
+}
+
+.btn8 {
+    background-color: #9a4f50;
+    color: white;
+    border: 2px solid #9a4f50;
+}
+
+.btn9 {
+    background-color: #CE6A6B;
+    color: white;
+    border: 2px solid #CE6A6B;
+}
+
+.btn10 {
+    background-color: #b0b0b0;
+    color: white;
+    border: 2px solid #b0b0b0;
+}
+
+/* Détail de l'article */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.article-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.custom-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.custom-card-body {
+    padding: 20px;
+}
+
+.custom-card-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #CE6A6B;
+}
+
+.custom-card-subtitle {
+    font-size: 1.25rem;
+    color: #9a4f50;
+}
+
+.custom-card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.img-container {
+    margin-top: 20px;
+}
+
+.custom-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+    background-color: #EBACA2;
+}
+
+.bloc2 .footer-menu .nav-link:hover,
+.bloc2 .social-media i:hover {
+    color: #CE6A6B;
+}
+
+.bloc1 .nav-link:hover,
+.bloc1 .liens .nav-link:hover {
+    color: #CE6A6B;
+}
+
+/* Animation sur les boutons au survol */
+.btnprofillien {
+    color: #9a4f50;
+    border-radius: 5px;
+    border: solid 2px #9a4f50;
+    width: 210px;
+    transition: 0.3s ease-in-out, transform 0.2s ease;
+    position: relative;
+}
+
+.btnprofillien:hover {
+    background-color: #9a4f50;
+    border: solid 2px #9a4f50;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Animation des boutons du tableau de bord */
+.btn1,
+.btn2,
+.btn4 {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.btn1:hover,
+.btn2:hover,
+.btn4:hover {
+    background-color: #b0b0b0;
+    transform: translateY(-5px);
+}
+
+/* Animation de fondu pour le contenu principal */
+.card-admin,
+.text-center {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Animation de fondu sur l'apparition des éléments */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pour l'image de profil */
+.btnprofil img {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+}

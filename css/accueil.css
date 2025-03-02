@@ -1,0 +1,249 @@
+/* Propriétés générales */
+h1 {
+    font-family: "Protest Riot";
+    font-size: 42px;
+    color: #CE6A6B;
+}
+
+h2 {
+    font-family: "Quicksand";
+    color: #4A919E;
+    font-weight: bolder;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-family: "Quicksand";
+    font-weight: 600;
+    color: white;
+    position: relative;
+}
+
+h5::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70px;
+    height: 5px;
+    background-color: #a75455;
+}
+
+p {
+    font-family: "Quicksand";
+    color: #212E53;
+}
+
+/* Bloc 1 */
+.card {
+    background-color: #ebaca265;
+    border: none;
+}
+
+.carousel-item h5 {
+    font-family: "Quicksand";
+    font-weight: 600;
+}
+
+.carousel-item h5::after {
+    content: none;
+}
+
+.carousel-caption p {
+    margin-top: 10px;
+}
+
+.card-text {
+    font-family: "Quicksand";
+    color: #212E53;
+}
+
+.btn {
+    font-family: "Quicksand";
+    width: 200px;
+    background-color: transparent;
+    color: #CE6A6B;
+    border: 2px solid #CE6A6B;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: #CE6A6B;
+    border: 2px solid transparent;
+}
+
+.btn i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+/* Carrousel */
+.carousel {
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel h2 {
+    margin-top: 0;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-inner p {
+    color: #212E53;
+}
+
+.carousel-item {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #ebaca2c3;
+    width: 100%;
+}
+
+/* Contrôles du carrousel */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #4a919ed0;
+    border-radius: 50%;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+/* Boutons */
+.carousel-item .btn {
+    font-family: "Quicksand";
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.carousel-item .btn:hover {
+    background-color: #CE6A6B;
+    border: 2px solid transparent;
+}
+
+.carousel-item .btn i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+/* Effet de zoom sur les images du carrousel */
+.carousel-inner img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Cours Cards */
+.card-emprunts {
+    background-color: #4A919E;
+}
+
+.card-img-left {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-emprunts .card-text {
+    margin-top: 10px;
+}
+
+.card-emprunts .btn {
+    font-family: "Quicksand";
+    width: 210px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.card-emprunts .btn:hover {
+    background-color: #212E53;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.card-emprunts .btn i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+/* Animation de la page d'accueil */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.block-animation {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.block-1 {
+    animation-delay: 0.2s;
+}
+
+.block-2 {
+    animation-delay: 0.4s;
+}
+
+.block-3 {
+    animation-delay: 0.6s;
+}
+
+.hidden {
+    opacity: 0;
+}

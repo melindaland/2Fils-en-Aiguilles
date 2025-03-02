@@ -1,0 +1,32 @@
+{% extends 'pro.twig' %}
+
+{% block main %}
+<h2>Ajouter une nouvelle information sur le matériel</h2>
+<form action="pro.php?page=objet&action=create" method="post" enctype="multipart/form-data" class="form-container">
+	<input type="hidden" name="id_materiel" value="{{ id_materiel }}">
+
+	<div class="mb-3">
+		<label for="titre" class="form-label">Titre</label>
+		<input type="text" name="titre" id="titre" class="form-control" placeholder="Titre">
+	</div>
+
+	<div class="mb-3">
+		<label for="redacteur" class="form-label">Rédacteur</label>
+		<input type="text" name="redacteur" id="redacteur" class="form-control" placeholder="Rédacteur">
+	</div>
+
+	<div class="mb-3">
+		<label for="accroche" class="form-label">Information</label>
+		<textarea name="accroche" id="accroche" class="form-control" rows="5" placeholder="Saisir une information"></textarea>
+	</div>
+
+	<div class="mb-3">
+		<label for="image" class="form-label">Image</label>
+		<input type="file" name="image" id="image" class="form-control">
+	</div>
+
+	<div class="mb-3">
+		<input type="submit" value="Envoyer" class="btn btn5">
+	</div>
+</form>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+Services | 2 Fil en Aiguilles
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="css/visitor.css">
+{% endblock %}
+
+{% block main %}
+<div class="container mt-4">
+    <h1>Télécharger un cours</h1>
+    <div class="row d-flex"> 
+        <!-- Colonne des filtres sur la gauche -->
+        <div class="col-md-3 d-flex flex-column mt-3">
+            <h4 class="mb-3">Filtres</h4>
+            <div class="list-group">
+                <a href="?page=visit_cours&niveau=tous&action=read" class="list-group-item list-group-item-action {% if niveau == 'tous' %} active {% endif %}">
+                    Voir tout
+                </a>
+                <a href="?page=visit_cours&niveau=debutant&action=read" class="list-group-item list-group-item-action {% if niveau == 'debutant' %} active {% endif %}">
+                    Débutant
+                </a>
+                <a href="?page=visit_cours&niveau=intermediaire&action=read" class="list-group-item list-group-item-action {% if niveau == 'intermediaire' %} active {% endif %}">
+                    Intermédiaire
+                </a>
+                <a href="?page=visit_cours&niveau=avance&action=read" class="list-group-item list-group-item-action {% if niveau == 'avance' %} active {% endif %}">
+                    Avancé
+                </a>
+            </div>
+        </div>
+
+        <!-- Colonne des cours à droite -->
+        <div class="col-md-9 d-flex flex-column">
+            <h2>{{ niveau }}</h2>
+            <div class="row">
+                {% for cours in liste_cours %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-bloc">
+                            <img src="upload/{{ cours.image }}" class="card-img-top" alt="{{ cours.nom }}">
+                            <div class="card-body bg-light">
+                                <p class="badge text-small">{{ cours.niveau }}</p>
+                                <h5 class="card-title">{{ cours.nom|slice(0, 20) ~ '...' }}</h5>
+                                <p>{{ cours.description|slice(0, 20) ~ '...' }}</p>
+                                <div class="text-center">
+                                    <a href="visiteur.php?page=cours&action=read&id={{ cours.id }}" class="btn btncours" style="font-size: 15px; margin-right: 5px;">
+                                        <i class="bi bi-plus"></i> Voir détail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>Aucun cours trouvé pour ce niveau.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

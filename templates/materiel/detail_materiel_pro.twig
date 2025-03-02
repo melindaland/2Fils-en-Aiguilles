@@ -1,0 +1,47 @@
+{% extends 'pro.twig' %}
+
+{% block main %}
+<div class="container-1 my-4">
+    <div class="card-1 mb-3">
+        <div class="row g-0">
+            <!-- Colonne pour l'image du matériel -->
+            <div class="col-md-4">
+                <img src="upload/{{ materiel.image }}" class="img-fluid custom-imgg" alt="Image du matériel">
+            </div>
+            <!-- Colonne pour le contenu du matériel -->
+            <div class="col-md-8">
+                <div class="card-body-1">
+                    <h4 class="bloc-title">{{ materiel.nom }}</h4>
+                    <p class="bloc-text">{{ materiel.description }}</p>
+                    <a href="pro.php?page=objet&action=new&id={{ materiel.id }}" class="btn btn6">Ajouter une information sur la location</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container2 my-4">
+    <h3 class="mb-4">Informations sur la location</h3>
+    <div class="row g-3 justify-content-start"> 
+        {% for objet in liste_objets %}
+        <div class="col-md-4"> 
+            <div class="bloc-card">
+                <div class="bloc-card-body">
+                    <img src="upload/{{ objet.image }}" class="bloc-image" alt="image de l'objet">
+                    <h4 class="bloc-title">{{ objet.titre}}</h4>
+                    <h5 class="bloc-subtitle">{{ objet.redacteur}}</h5>
+                    <p class="bloc-text">{{ objet.accroche}}</p>
+                    <div class="bloc-actions">
+                        <a href="pro.php?page=objet&action=read&id={{ objet.id }}" class="btn btn7">Voir le détail</a>
+                        <a href="pro.php?page=objet&action=exchange&id={{ objet.id }}" class="btn btn8">Remonter</a>
+                        <a href="pro.php?page=objet&action=edit&id={{ objet.id }}" class="btn btn9">Modifier</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p>Aucune information présente</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

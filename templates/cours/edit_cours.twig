@@ -1,0 +1,45 @@
+{% extends 'admin.twig' %}
+
+{% block main %}
+<div class="container mt-3 p-4">
+    <h1 class="text-center">Modifier le cours</h1>
+    <form action="admin.php?page=cours&action=update" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="id" readonly value="{{ cours.id }}">
+
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom du cours</label>
+            <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" value="{{ cours.nom }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description du cours</label>
+            <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="{{ cours.description }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="old-image" class="form-label">Image actuelle</label>
+            <input type="text" class="form-control" id="old-image" name="old-image" value="{{ cours.image }}" readonly>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Nouvelle image</label>
+            <input type="file" class="form-control" id="image" name="image">
+        </div>
+
+        <div class="mb-3">
+            <label for="niveau" class="form-label">Niveau</label>
+            <select class="form-select" id="niveau" name="niveau" required>
+                <option value="debutant" {% if cours.niveau == 'debutant' %}selected{% endif %}>Débutant</option>
+                <option value="intermediaire" {% if cours.niveau == 'intermediaire' %}selected{% endif %}>Intermédiaire</option>
+                <option value="avance" {% if cours.niveau == 'avance' %}selected{% endif %}>Avancé</option>
+            </select>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <input type="submit" class="btn btn5" value="Envoyer">
+        </div>
+        
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+Connexion | 2 Fil en Aiguilles
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="css/style.css">
+{% endblock %}
+
+{% block main %}
+<div class="container mt-5">
+    <div class="row align-items-stretch">
+        <!-- Formulaire de connexion -->
+        <div class="formulaire col-md-6 d-flex flex-column justify-content-center mb-4">
+            <h1 class="mb-4">Connexion</h1>
+            <p class="mb-4 fw-bold">Parcourez l'ensemble du matériel et des services proposés sur le site.</p>
+            <form action="index.php?page=valid_login" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Vous êtes ?</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="role" id="admin" value="admin" required>
+                        <label class="form-check-label" for="admin">Administrateur</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="role" id="pro" value="pro" required>
+                        <label class="form-check-label" for="pro">Professionnel</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="login" class="form-label">Identifiant</label>
+                    <input type="text" name="login" class="form-control" id="login" placeholder="admin24! ou pro24!" required />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Saisir votre mot de passe" required />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="bi bi-person-fill-lock"></i> Se connecter
+                </button>
+            </form>
+        </div>
+        
+        <!-- Image de présentation -->
+        <div class="col-md-6 d-flex align-items-center mb-4">
+            <img src="https://www.lavieennoeuds.com/wp-content/uploads/2024/02/1707148727_couture-pour-debutants-conseils-essentiels-pour-coudre-vos-vetements-1-1024x701.jpg" class="fixed-image rounded" alt="Image de présentation">
+        </div>
+    </div>
+</div>
+{% endblock %}

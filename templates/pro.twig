@@ -1,0 +1,72 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+Professionnel | 2 Fil en Aiguilles
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="css/pro.css">
+{% endblock %}
+
+{% block menu %}
+<!-- Côté professionnel -->
+<div class="header-menu">
+    <a href="pro.php">
+		<img src="./images/logo.png" alt="Logo" class="logo_menu">
+	</a>
+    <nav class="menu">
+        <a class="nav-link" href="pro.php?page=materiel"><i class="bi bi-wrench"></i>Gestion de mes locations</a>
+        <a class="nav-link" href="pro.php?page=cours"><i class="bi bi-pen-fill"></i>Gestion de mes cours</a>
+        <a class="nav-link" href="index.php?page=login"><i class="bi bi-box-arrow-right"></i>Quitter</a>
+    </nav>
+{% endblock %}
+
+{% block main %}
+<!-- Intro sur la page professionnel -->
+<div class="card-admin text-dark bg-light mb-3 mt-4 w-100 text-center text-white">
+  <div class="card-header">Tableau de bord du professionnel</div>
+  <div class="card-body">
+    <h4 class="card-title">Bienvenue sur votre espace</h4>
+    <p class="card-text">Cet espace a été conçu pour vous offrir une gestion simplifiée et efficace de vos matériels loués et de vos cours mis à disposition. Depuis ce tableau de bord, vous avez accès à toutes les fonctionnalités nécessaires pour maintenir, organiser et les articles et les ressources pédagogiques.</p>
+  </div>
+</div>
+
+<!-- présentation pro -->
+<div class="text-center mt-5">
+  <div class="d-flex flex-column justify-content-center align-items-center border bg-light rounded p-5 mx-auto" style="width: 800px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <!-- Conteneur image avec badge et informations -->
+      <div class="d-flex flex-column justify-content-center align-items-center flex-grow-1 me-4">
+        <!-- Image avec badge -->
+        <button type="button" class="btn btnprofil position-relative">
+          <img src="https://us.123rf.com/450wm/djvstock/djvstock1710/djvstock171017466/88806500-visage-de-l-ic%C3%B4ne-de-visage-de-bande-dessin%C3%A9e-sur-fond-blanc-illustration-vectorielle.jpg?ver=6" alt="Profile Image" class="img-fluid rounded-circle" width="120" height="120">
+          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+            5
+          </span>
+        </button>
+
+        <!-- Liste des informations du professionnel -->
+        <div class="mt-4 text-center w-100">
+          <ul class="list-unstyled text-grey">
+            <li>VUYNABBBV</li>
+            <li>vuynabbbv@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Conteneur des boutons à droite -->
+      <div class="d-flex flex-column align-items-stretch flex-grow-1 ms-4">
+        <a href="pro.php?page=materiel" class="btn btnprofillien mx-2 btn-md mb-3 py-3">Louer un matériel</a>
+        <a href="pro.php?page=cours" class="btn btnprofillien mx-2 btn-md py-3">Publier un cours</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock %}
+
+
+
+
+

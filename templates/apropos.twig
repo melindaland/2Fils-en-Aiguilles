@@ -1,0 +1,73 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+A Propos | 2 Fil en Aiguilles
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="css/apropos.css">
+{% endblock %}
+
+{% block main %}
+<div class="container my-4">
+  <h1>A propos </h1>
+    <div class="row text-center">
+        <!-- Emprunt de matériel -->
+        <div class="col-md-3 mt-4">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-tools icon-custom fs-1 mb-2"></i>
+                <p class="fw-bold">Emprunter du matériel</p>
+                <p>Accédez facilement à une variété de matériels de couture proposés par notre communauté.</p>
+            </div>
+        </div>
+        <!-- Louer du matériel -->
+        <div class="col-md-3 mt-4">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-cart4 icon-custom fs-1 mb-2"></i>
+                <p class="fw-bold">Louer du matériel</p>
+                <p>Profitez de matériels professionnels à louer pour réaliser vos projets créatifs.</p>
+            </div>
+        </div>
+        <!-- Télécharger un cours -->
+        <div class="col-md-3 mt-4">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-download icon-custom fs-1 mb-2"></i>
+                <p class="fw-bold">Télécharger un cours</p>
+                <p>Apprenez à confectionner bonnets, écharpes, pulls grâce à nos cours téléchargeables.</p>
+            </div>
+        </div>
+        <!-- Voir un cours -->
+        <div class="col-md-3 mt-4">
+            <div class="d-flex flex-column align-items-center">
+                <i class="bi bi-eye icon-custom fs-1 mb-2"></i>
+                <p class="fw-bold">Voir un cours</p>
+                <p>Consultez directement nos cours en ligne pour perfectionner vos compétences.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cards -->
+<div class="card-container">
+  <div class="card">
+    <img src="https://cache.marieclaire.fr/data/photo/w1200_h630_c17/4w/cours-de-couture.jpg" class="card-img" alt="échange de matériel">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Emprunts de matériel</h5>
+      <p class="card-text">Notre site a été conçu pour répondre aux besoins de la communauté en facilitant l'emprunt de matériel de couture, proposé en location par nos membres. Que vous ayez besoin d'une machine à coudre, d'aiguilles, ou de bobines de fils, vous trouverez tout ce qu'il vous faut pour mener à bien vos projets créatifs.</p>
+      <a href="visiteur.php?page=visit_materiel" class="btn btn-primary mt-4">
+        <i class="bi bi-tools"></i> Voir les matériels
+      </a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://www.huguettepaillettes.fr/wp-content/uploads/2024/04/ateliers-couture-tours.jpg" class="card-img" alt="atelier de couture">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Cours de couture</h5>
+      <p class="card-text">En plus du partage de matériel, 2 Fil en Aiguilles vous donne accès à une variété de services dédiés à l'apprentissage de la couture. Vous pouvez ainsi télécharger des cours de couture conçus pour vous guider pas à pas.</p>
+      <a href="visiteur.php?page=visit_cours" class="btn btn-primary mt-4">
+        <i class="bi bi-book"></i> Voir les cours
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

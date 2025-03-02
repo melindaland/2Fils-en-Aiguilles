@@ -1,0 +1,69 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+Matériels | 2 Fil en Aiguilles
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="css/visitor.css">
+{% endblock %}
+
+{% block main %}
+<!-- Les matériels -->
+<div class="container mt-4">
+    <h1>Emprunter un matériel</h1>
+
+    <div class="row d-flex">
+        <!-- Colonne des filtres sur la gauche -->
+        <div class="col-md-3 d-flex flex-column mt-3">
+            <h4 class="mb-3">Filtres</h4>
+            <div class="list-group">
+                <a href="?page=visit_materiel&categorie=tous&action=read" class="list-group-item list-group-item-action {% if categorie == 'tous' %} active {% endif %}">
+                    Voir tout
+                </a>
+                <a href="?page=visit_materiel&categorie=machineacoudre&action=read" class="list-group-item list-group-item-action {% if categorie == 'machineacoudre' %} active {% endif %}">
+                    Machines à coudre
+                </a>
+                <a href="?page=visit_materiel&categorie=kitdecouture&action=read" class="list-group-item list-group-item-action {% if categorie == 'kitdecouture' %} active {% endif %}">
+                    Kits de couture
+                </a>
+                <a href="?page=visit_materiel&categorie=bobine&action=read" class="list-group-item list-group-item-action {% if categorie == 'bobine' %} active {% endif %}">
+                    Bobines
+                </a>
+                <a href="?page=visit_materiel&categorie=metreruban&action=read" class="list-group-item list-group-item-action {% if categorie == 'metreruban' %} active {% endif %}">
+                    Mètres ruban
+                </a>
+                <a href="?page=visit_materiel&categorie=ciseaux&action=read" class="list-group-item list-group-item-action {% if categorie == 'ciseaux' %} active {% endif %}">
+                    Ciseaux
+                </a>
+            </div>
+        </div>
+
+        <!-- Colonne des matériels à droite -->
+        <div class="col-md-9 d-flex flex-column">
+            <h2><strong>{{ categorie }}</strong></h2>
+            <div class="row">
+                {% for materiel in liste_materiel %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-bloc">
+                            <img src="upload/{{ materiel.image }}" class="card-img-top" alt="{{ materiel.nom }}">
+                            <div class="card-body bg-light">
+                                <p class="badge text-small">{{ materiel.categorie }}</p>
+                                <h5 class="card-title">{{ materiel.nom|slice(0, 20) ~ '...' }}</h5>
+                                <p>{{ materiel.description|slice(0, 20) ~ '...' }}</p>
+                                <div class="text-center">
+                                    <a href="visiteur.php?page=materiel&action=read&id={{ materiel.id }}" class="btn btncours" style="font-size: 15px; margin-right: 5px;">
+                                        <i class="bi bi-plus"></i> Voir détail
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>Aucun matériel trouvé pour cette catégorie.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

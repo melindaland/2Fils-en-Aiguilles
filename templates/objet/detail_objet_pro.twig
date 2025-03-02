@@ -1,0 +1,22 @@
+{% extends 'pro.twig' %}
+
+{% block main %}
+<main class="main-container">
+    <div class="article-container my-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="custom-card bg-white shadow-sm">
+                    <div class="custom-card-body text-center">
+                        <h3 class="custom-card-title">{{ objet.titre }}</h3>
+                        <h4 class="custom-card-subtitle mb-3 text-muted">{{ objet.redacteur }}</h4>
+                        <p class="custom-card-text">{{ objet.accroche }}</p>
+                        <div class="img-container">
+                            <img src="upload/{{ objet.image }}" alt="image" class="custom-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+Accueil | 2 Fils en Aiguilles
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/accueil.css">
+{% endblock %}
+
+{% block main %}
+<!-- Bloc 1 : Bienvenue -->
+<div class="card mb-3 my-4 hidden block-animation block-1">
+  <div class="row g-0">
+    <div class="col-md-8">
+      <div class="card-body">
+        <h1 class="card-title mb-4">Bienvenue sur 2 Fils en Aiguilles</h1>
+        <p class="card-text fw-bold">Nous souhaitons rendre la couture accessible à tous, du débutant au plus expérimenté :</p>
+        <ul>
+          <li class="card-text"><strong>Des cours de couture :</strong> Télécharger des cours écrits par des professionnels pour un apprentissage personnalisé.</li>
+          <li class="card-text"><strong>Des services d'emprunt de matériel :</strong> Emprunter facilement le matériel dont vous avez besoin, sans avoir à investir dans un équipement coûteux.</li>
+        </ul>
+        <a href="visiteur.php?page=apropos" class="btn btn-primary mt-4">
+            <i class="bi bi-megaphone-fill"></i> À Propos
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img src="https://www.mercipourlechocolat.fr/wp-content/uploads/2022/05/ateliercouturemaison05.jpg" class="img-fluid rounded-end" alt="image-acceuil1">
+    </div>
+  </div>
+</div>
+
+<!-- Bloc 2 : Carroussel -->
+<h2 class="block-2">Les cours qui pourraient vous intéresser</h2>
+<div id="carouselExampleDark" class="carousel carousel-dark slide hidden block-animation block-2" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://caudebecleselbeuf.fr/wp-content/uploads/2023/10/couture-1280x720.jpg" class="d-block w-100 rounded" alt="Ateliers">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Cours Niveau Débutant</h5>
+        <p>Vous n'avez jamais cousu ou vous souhaitez apprendre les bases ? Ce cours est fait pour vous ! Vous y découvrirez les fondamentaux de la couture.</p>
+        <a href="visiteur.php?page=visit_cours&niveau=debutant&action=read" class="btn btn-light">
+          <i class="bi bi-plus-lg"></i> Détails
+        </a>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://cdn.paris.fr/qfapv4/2024/02/14/large-3af8dbe46811fac035f05961830bfaa8.jpg" class="d-block w-100 rounded" alt="Ateliers">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Cours Niveau Intermédiaire</h5>
+        <p>Si vous avez déjà les bases de la couture et que vous souhaitez perfectionner vos techniques, ce cours intermédiaire est pour vous !</p>
+        <a href="visiteur.php?page=visit_cours&niveau=intermediaire&action=read" class="btn btn-light">
+          <i class="bi bi-plus-lg"></i> Détails
+        </a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://recreanice.fr/sites/default/files/imce/2_-_2_0.jpg" class="d-block w-100 rounded" alt="Ateliers">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Cours Niveau Expert</h5>
+        <p>Ce cours s'adresse à ceux qui maîtrisent déjà la couture et souhaitent se lancer dans des projets plus ambitieux et techniques.</p>
+        <a href="visiteur.php?page=visit_cours&niveau=avance&action=read" class="btn btn-light">
+          <i class="bi bi-plus-lg"></i> Détails
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Précédent</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Suivant</span>
+  </button>
+</div>
+
+<!-- Bloc 3 : Emprunts -->
+<h2 class="block-3">Top des Emprunts</h2>
+<div class="row hidden block-animation block-3">
+  <div class="col-md-6">
+    <div class="card-emprunts">
+      <div class="d-flex">
+        <img src="https://m.media-amazon.com/images/I/61Rzw4Su9AL.jpg" class="card-img-left" alt="machine à coudre">
+        <div class="card-body d-flex flex-column justify-content-start">
+          <h5 class="card-title">Machine à Coudre</h5>
+          <p class="card-text">La machine à coudre est l’outil incontournable pour tous les passionnés de couture, des débutants aux plus expérimentés. Que vous souhaitiez réaliser vos premiers projets ou perfectionner vos techniques, cette machine robuste et polyvalente vous permettra de réaliser une grande variété de créations.</p>
+          <a href="visiteur.php?page=visit_materiel&categorie=machineacoudre&action=read" class="btn btn-primary">
+            <i class="bi bi-tools"></i> Emprunter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card-emprunts">
+      <div class="d-flex">
+        <img src="https://m.media-amazon.com/images/I/8141hYXtIhL.jpg" class="card-img-left" alt="kit couture">
+        <div class="card-body d-flex flex-column justify-content-start">
+          <h5 class="card-title">Kit de Couture</h5>
+          <p class="card-text">Le kit de couture est le compagnon parfait pour tous vos projets créatifs. Complet et pratique, il contient tous les outils essentiels pour démarrer ou améliorer vos compétences en couture : aiguilles, fils, ciseaux, épingles, mètres rubans et bien plus encore.</p>
+          <a href="visiteur.php?page=visit_materiel&categorie=kitdecouture&action=read" class="btn btn-primary">
+            <i class="bi bi-tools"></i> Emprunter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
